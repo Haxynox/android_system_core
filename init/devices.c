@@ -552,9 +552,6 @@ static char **get_block_device_symlinks(struct uevent *uevent)
     else
         links[link_num] = NULL;
 
-    if (!strncmp(device, bootdevice, sizeof(bootdevice))) {
-        make_link_init(link_path, "/dev/block/bootdevice");
-    }
     return links;
 }
 
