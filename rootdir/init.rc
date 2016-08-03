@@ -644,7 +644,7 @@ service ril-daemon /system/bin/rild
     socket sap_uim_socket1 stream 660 bluetooth bluetooth
     socket rild-debug stream 660 radio system
     user root
-    group radio cache inet misc audio log
+    group radio cache inet misc audio log qcom_diag
 
 service surfaceflinger /system/bin/surfaceflinger
     class core
@@ -693,9 +693,9 @@ service installd /system/bin/installd
     class main
     socket installd stream 600 system system
 
-service flash_recovery /system/bin/install-recovery.sh
-    class main
-    oneshot
+#service flash_recovery /system/bin/install-recovery.sh
+#    class main
+#    oneshot
 
 service racoon /system/bin/racoon
     class main
